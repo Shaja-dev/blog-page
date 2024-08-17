@@ -18,7 +18,7 @@ def lambda_handler(event, context):
         # İlgili bilgileri DynamoDB'ye kaydet
         response = table.put_item(
             Item={
-                'Filename': file_name,
+                'filename': file_name,
                 'BucketName': bucket_name,
                 'Timestamp': record['eventTime']
             }
